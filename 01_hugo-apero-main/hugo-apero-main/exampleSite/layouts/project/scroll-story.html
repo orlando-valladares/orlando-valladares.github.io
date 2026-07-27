@@ -1,0 +1,26 @@
+{{ define "main" }}
+<main class="page-main story-main" data-scroll-story>
+  {{ with .Params.question }}
+  <section class="story-question" aria-labelledby="story-question-heading">
+    <div class="story-question__inner">
+      <p class="story-question__label">{{ i18n "research_question" }}</p>
+      <h2 id="story-question-heading">{{ . }}</h2>
+      <p class="story-question__prompt" aria-hidden="true">{{ i18n "scroll_prompt" }} <span>↓</span></p>
+    </div>
+  </section>
+  {{ end }}
+  <header class="story-hero">
+    <p class="story-hero__label">{{ i18n "research_story" }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="story-hero__subtitle">{{ . }}</p>{{ end }}
+    {{ with .Params.description }}<p class="story-hero__description">{{ . }}</p>{{ end }}
+    {{ with .Params.abstract }}<section class="story-abstract"><h2>{{ i18n "abstract" }}</h2><p>{{ . }}</p></section>{{ end }}
+    {{ with .Params.draft_pdf }}<p class="story-hero__download"><a href="{{ . | relURL }}" target="_blank" rel="noopener">Draft Paper PDF</a></p>{{ end }}
+  </header>
+  <div class="story-progress" aria-hidden="true"><span></span></div>
+  <article class="story-content">
+    {{ .Content }}
+  </article>
+</main>
+<script src="{{ "js/scroll-story.js" | relURL }}" defer></script>
+{{ end }}

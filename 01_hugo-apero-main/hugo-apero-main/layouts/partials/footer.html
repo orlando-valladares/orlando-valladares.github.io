@@ -1,0 +1,20 @@
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <div class="site-footer__inner">
+    {{ $home := site.Home }}
+    {{ with $home.Params.method_quote }}
+      <aside class="site-footer__method" aria-label="{{ if eq site.Language.Lang "es" }}Nota metodológica{{ else }}Methodological note{{ end }}">
+        <blockquote class="site-footer__quote">{{ . | markdownify }}</blockquote>
+        {{ with $home.Params.method_quote_source }}<div class="site-footer__source">{{ . | markdownify }}</div>{{ end }}
+        {{ with $home.Params.method_question }}<p class="site-footer__question">{{ . }}</p>{{ end }}
+      </aside>
+    {{ end }}
+    {{ with site.Copyright }}<p class="site-copyright f7 lh-copy">{{ . | safeHTML }}</p>{{ end }}
+  </div>
+  {{ with site.Params.math }}
+    {{ partial "shared/math-preprocess.html" }}
+  {{ with .renderer }}
+    {{ if eq . "mathjax" }}{{ partial "shared/math-render-mathjax.html" . }}{{ end }}
+    {{ if eq . "katex" }}{{ partial "shared/math-render-katex.html" . }}{{ end }}
+  {{ end }}
+  {{ end }}
+</footer>

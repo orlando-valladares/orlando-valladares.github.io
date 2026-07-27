@@ -1,0 +1,23 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="blog-intro mw8 center tc mb5">
+    <h1 class="f2 f1-ns lh-solid center fw4">{{ .Title }}</h1>
+    {{ with .Description }}<p class="f6 f5-ns measure lh-copy center">{{ . }}</p>{{ end }}
+  </section>
+  <section class="projects-grid" aria-label="{{ .Title }}">
+    {{ range where .RegularPagesRecursive "Type" "project" }}
+      {{ $feature := (.Resources.ByType "image").GetMatch "*feature*" }}
+      <article class="project-card">
+        <a class="project-card__image" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+          {{ with $feature }}<img src="{{ .RelPermalink }}" alt="" decoding="async">{{ end }}
+        </a>
+        <div class="project-card__body">
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Params.subtitle }}<p class="project-card__subtitle">{{ . }}</p>{{ end }}
+          {{ with .Params.excerpt }}<div class="project-card__recognition">{{ . | markdownify }}</div>{{ end }}
+        </div>
+      </article>
+    {{ end }}
+  </section>
+</main>
+{{ end }}

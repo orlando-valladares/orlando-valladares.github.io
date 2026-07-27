@@ -1,0 +1,18 @@
+[about]
+other = "About"
+[blogs]
+other = "Blogs"
+[projects]
+other = "Projects"
+[language]
+other = "Language"
+[research_story]
+other = "Research story"
+[scroll_prompt]
+other = "Scroll to follow the argument"
+
+[abstract]
+other = "Abstract"
+
+[research_question]
+other = "Research question"

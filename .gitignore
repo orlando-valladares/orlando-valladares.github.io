@@ -1,0 +1,21 @@
+# Private research sources: never commit or publish these directories.
+/02_scrollsites/
+/03_elements/
+
+# Hugo build output and generated caches.
+/01_hugo-apero-main/hugo-apero-main/exampleSite/public/
+/01_hugo-apero-main/hugo-apero-main/exampleSite/resources/
+/01_hugo-apero-main/hugo-apero-main/exampleSite/build-*/
+/01_hugo-apero-main/hugo-apero-main/exampleSite/audit-*/
+/01_hugo-apero-main/hugo-apero-main/exampleSite/.hugo_build.lock
+
+# Local/editor debris and archives.
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+*.zip
+*.7z
+*.tar
+*.tar.gz
+

@@ -1,0 +1,29 @@
+{{ $page := . }}
+{{ $blog := .Site.GetPage "section" "blog" }}
+{{ $projects := .Site.GetPage "section" "project" }}
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" aria-label="Primary navigation">
+    <div class="site-links site-links--personal db dtc-l v-mid w-100 tc tr-l mt3 mt0-l">
+      <a class="link f6 f5-l dib pv1 ph2 {{ if .IsHome }}active{{ end }}" href="{{ .Site.Home.RelPermalink }}">{{ i18n "about" }}</a>
+      {{ with $projects }}<a class="link f6 f5-l dib pv1 ph2 {{ if eq $page.Section "project" }}active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "projects" }}</a>{{ end }}
+      {{ with $blog }}<a class="link f6 f5-l dib pv1 ph2 {{ if eq $page.Section "blog" }}active{{ end }}" href="{{ .RelPermalink }}">{{ i18n "blogs" }}</a>{{ end }}
+      <span class="language-switcher" aria-label="{{ i18n "language" }}">
+        {{ range $languageSite := hugo.Sites }}
+          {{ $language := $languageSite.Language }}
+          {{ $target := "" }}
+          {{ if eq $language.Name $page.Language.Name }}
+            {{ $target = $page.RelPermalink }}
+          {{ else }}
+            {{ range $translation := $page.Translations }}
+              {{ if eq $translation.Language.Name $language.Name }}{{ $target = $translation.RelPermalink }}{{ end }}
+            {{ end }}
+            {{ if eq $target "" }}
+              {{ $target = $languageSite.Home.RelPermalink }}
+            {{ end }}
+          {{ end }}
+          <a class="language-switcher__option {{ if eq $language.Name $page.Language.Name }}is-active{{ end }}" href="{{ $target }}" lang="{{ $language.Name }}" {{ if eq $language.Name $page.Language.Name }}aria-current="page"{{ end }}>{{ upper $language.Name }}</a>
+        {{ end }}
+      </span>
+    </div>
+  </nav>
+</header>

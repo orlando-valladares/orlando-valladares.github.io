@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale }}" dir="ltr">
+    {{- partial "head.html" . -}}
+    {{ $homeVariant := .Site.Params.design.homeVariant | default "light" }}
+    {{ $projectVariant := .Site.Params.design.projectVariant | default "light" }}
+    <body class="{{ if .IsHome }}home-theme--{{ $homeVariant }}{{ end }}{{ if and .IsPage (eq .Section "project") }} project-theme--{{ $projectVariant }}{{ end }}">
+      <div class="grid-container{{ if .Params.layout }} {{ .Params.layout }}{{ end }}{{ if .IsHome }} home{{ end }}">
+        {{- block "header" . }}{{- partial "header.html" . -}}{{- end }}
+        {{- block "main" . }}{{- end }}
+        {{- block "footer" . }}{{- partial "footer.html" . -}}{{- end }}
+      </div>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+baseURL = "/"
+# Build from this directory with: hugo --themesDir ../..
+# Set the final GitHub Pages baseURL before publishing; see WEBSITE-WORKFLOW.md.
+themesDir = "../../"
+theme = "hugo-apero-main"
+locale = "en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+title = "Orlando Valladares"
+author = "Orlando Valladares"
+copyright = "© Orlando Valladares"
+metaDataFormat = "yaml"
+footnoteReturnLinkContents = "&#8617;"
+
+[pagination]
+  pagerSize = 8
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 2
+  [markup.highlight]
+    style = "github"
+
+[params]
+  orgName = "Orlando Valladares"
+  orgLocal = ""
+  description = "Orlando Valladares is Honduran and cares about development."
+  favicon = "img/favicon.ico"
+  logo = ""
+  hideBrand = true
+  mainSections = ["blog", "project"]
+  navallcaps = false
+  socialInHeader = false
+  socialInFooter = false
+  sharing_image = "/img/orlando-valladares.jpg"
+  twitter = ""
+  theme = "peach"
+  customtextFontFamily = "Atkinson Hyperlegible"
+  customheadingFontFamily = "Fraunces"
+  textFontFamily = "sans-serif"
+  headingFontFamily = "sans-serif"
+  comments = ""
+  # Reversible colour variants: set either value to "light" to restore the original light treatment.
+  [params.design]
+    homeVariant = "brick"
+    projectVariant = "nocturne"
+
+  [params.math]
+    renderer = "katex"
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[menu]
+  [[menu.header]]
+    name = "About"
+    title = "About Orlando Valladares"
+    url = "/"
+    weight = 1
+  [[menu.header]]
+    name = "Blogs"
+    title = "Blogs"
+    url = "/blog/"
+    weight = 3
+  [[menu.header]]
+    name = "Projects"
+    title = "Projects"
+    url = "/project/"
+    weight = 2
+
+[privacy]
+  [privacy.googleAnalytics]
+    disable = true
+    respectDoNotTrack = true
+
+[languages]
+  [languages.en]
+    locale = "en"
+    label = "English"
+    weight = 1
+  [languages.es]
+    locale = "es"
+    label = "Español"
+    weight = 2

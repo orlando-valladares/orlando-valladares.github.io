@@ -1,0 +1,18 @@
+[about]
+other = "Sobre mí"
+[blogs]
+other = "Blog"
+[projects]
+other = "Proyectos"
+[language]
+other = "Idioma"
+[research_story]
+other = "Historia de investigación"
+[scroll_prompt]
+other = "Desplácese para seguir el argumento"
+
+[abstract]
+other = "Resumen"
+
+[research_question]
+other = "Pregunta de investigación"

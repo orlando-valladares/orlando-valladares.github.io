@@ -1,0 +1,25 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <article class="split-post mw9 center">
+    <header class="split-post__header">
+      <p class="split-post__eyebrow">{{ .PublishDate.Format "January 2, 2006" }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.subtitle }}<p class="split-post__subtitle">{{ . }}</p>{{ end }}
+    </header>
+    {{ if and .Params.left .Params.right }}
+    <section class="split-reading" aria-label="Two-part essay">
+      <article class="reading-panel reading-panel--left">
+        {{ .Params.left | markdownify }}
+      </article>
+      <article class="reading-panel reading-panel--right">
+        {{ .Params.right | markdownify }}
+      </article>
+    </section>
+    {{ else }}
+    <section class="post-body mw7 center pt4 pb4">
+      {{ .Content }}
+    </section>
+    {{ end }}
+  </article>
+</main>
+{{ end }}
