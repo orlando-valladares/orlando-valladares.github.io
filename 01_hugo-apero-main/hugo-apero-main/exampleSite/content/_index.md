@@ -1,5 +1,6 @@
 ---
 title: "Orlando Valladares Fernandez"
+affiliation: "Dartmouth College ’26"
 description: |
   Born and raised in Tegucigalpa, Honduras, I am interested in how development in the periphery is actually lived, and how rigorous evidence suggests it may be improved. My interests include randomized control trials (RCTs), Liberation Theology, the impacts of crime in Latin America, and the space between econometric methods and STATA, on the one hand, and ethnography, on the other. In the short term, I hope to contribute to evidence-based development work in Central America; in the longer term, I hope to continue through graduate study.
 method_quote: |
