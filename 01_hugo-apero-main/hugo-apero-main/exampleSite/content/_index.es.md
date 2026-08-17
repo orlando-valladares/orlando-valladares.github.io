@@ -2,7 +2,7 @@
 title: "Orlando Valladares Fernandez"
 affiliation: "Dartmouth College ’26"
 description: |
-  Nacido y criado en Tegucigalpa, Honduras, me interesa cómo realmente se vive el desarrollo en la periferia y qué indica la evidencia rigurosa sobre cómo se puede mejorar. Mis intereses incluyen evaluaciones aleatorizadas, teología de la liberación, los impactos del crimen en América Latina y el espacio entre los métodos econométricos y STATA, por un lado, y la etnografía, por el otro. En el corto plazo, espero contribuir al trabajo de desarrollo basado en evidencia en Centroamérica; a más largo plazo, espero continuar mediante estudios de posgrado.
+  Nacido y criado en Tegucigalpa, Honduras, me interesa cómo se vive realmente el desarrollo en la periferia y qué sugiere la evidencia rigurosa sobre cómo podría mejorarse. Mis intereses incluyen las evaluaciones aleatorizadas (RCTs), la teología de la liberación y los impactos del crimen en América Latina. También me interesa lo que podrían crear, al combinarse, una econometría rigurosa y una sensibilidad etnográfica igualmente rigurosa. En el corto plazo, trabajo para contribuir al desarrollo basado en evidencia en Centroamérica desde la oficina de J-PAL LAC en Guatemala; a más largo plazo, espero continuar esta labor mediante estudios de posgrado.
 cv: documents/orlando-valladares-cv-es.pdf
 email: oavalladares@uvg.edu.gt
 images:
