@@ -7,7 +7,6 @@ This is the operating guide for the personal Hugo site in `01_hugo-apero-main/hu
 You do not need a second content system. These two Markdown files already are the website source of truth:
 
 - **Economics — Hurricane Mitch:** `01_hugo-apero-main/hugo-apero-main/exampleSite/content/project/mitch/index.md`
-- **Anthropology — Upper Valley housing:** `01_hugo-apero-main/hugo-apero-main/exampleSite/content/project/upper-valley/index.md`
 
 This is the minimal workflow because Hugo reads those files directly. Creating separate “easy-edit” copies would make the site and the drafts drift apart. The `.es.md` file beside each one is the Spanish version.
 
@@ -24,7 +23,6 @@ In either master file:
 ### Self-editing checklist
 
 - [ ] **Economics / Mitch:** Did I edit `content/project/mitch/index.md`?
-- [ ] **Anthropology / Upper Valley:** Did I edit `content/project/upper-valley/index.md`?
 - [ ] Did I preserve the two `---` front-matter boundaries?
 - [ ] Did I keep every image path under `static/img/projects/` and use the matching path after `src="img/projects/..."`?
 - [ ] Did I update `index.es.md` if the public Spanish translation should change too?
@@ -154,7 +152,7 @@ Then build the story from repeated sections. The first column is the argument an
 
 Prefer 4–7 sections with one visual each: a hook, context, evidence, method, finding, and limitation/next step is a dependable sequence. Write captions that say what a figure is and name its data source. Put only web-sized copies in `static/img/projects/`; preserve the original research files where they already live.
 
-Before publishing an ethnographic project, review names, quotes, locations, health, immigration, work, and family details, as well as faces, homes, vehicles, numbers, documents, and addresses in every image. The Upper Valley story is intentionally conservative: it omits individual quotations and uses the presentation's note that non-author photographs had permission.
+Before publishing an ethnographic project, review names, quotes, locations, health, immigration, work, and family details, as well as faces, homes, vehicles, numbers, documents, and addresses in every image.
 
 ## Preview locally
 

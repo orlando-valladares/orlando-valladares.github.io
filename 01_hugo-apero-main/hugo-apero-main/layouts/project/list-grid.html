@@ -6,11 +6,14 @@
   </section>
   <section class="projects-grid" aria-label="{{ .Title }}">
     {{ range where .RegularPagesRecursive "Type" "project" }}
+      {{ $project := . }}
       {{ $feature := (.Resources.ByType "image").GetMatch "*feature*" }}
       <article class="project-card">
-        <a class="project-card__image" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
-          {{ with $feature }}<img src="{{ .RelPermalink }}" alt="" decoding="async">{{ end }}
-        </a>
+        {{ with $feature }}
+          <a class="project-card__image" href="{{ $project.RelPermalink }}" aria-label="{{ $project.Title }}">
+            <img src="{{ .RelPermalink }}" alt="" decoding="async">
+          </a>
+        {{ end }}
         <div class="project-card__body">
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           {{ with .Params.subtitle }}<p class="project-card__subtitle">{{ . }}</p>{{ end }}
